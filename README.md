@@ -18,3 +18,7 @@ Run `npm start` in the terminal
 - semantic-ui-react
 - semantic-ui-css
 - react-router-dom
+
+### Email & Secret
+Email: hui-niu@outlook.com
+Secret: nh123
