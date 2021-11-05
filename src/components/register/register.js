@@ -7,8 +7,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [secret, setSecret] = useState("");
   const [apiData, setApiData] = useState([]);
-  const [registered, setRegistered] = useState(true);
-  console.log("1", apiData);
+  const [registered, setRegistered] = useState(false);
 
   async function sumbit() {
     const response = await axios.get(
@@ -50,7 +49,7 @@ export default function Register() {
       </Form.Field>
       {!registered ? (
         <Button type="submit" onClick={() => check()}>
-          Login
+          Submit
         </Button>
       ) : (
         <Link to="/read">

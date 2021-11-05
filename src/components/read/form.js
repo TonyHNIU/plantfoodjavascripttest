@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Form() {
   const [apiData, setApiData] = useState([]);
-  console.log("2", apiData);
+
   useEffect(() => {
     axios
       .get(

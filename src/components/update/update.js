@@ -5,7 +5,6 @@ import { Form, Button } from "semantic-ui-react";
 export default function Update() {
   const [repo, setRepo] = useState([]);
   const [ID, setID] = useState(null);
-  //const [newrepo, setNewrepo] = useState("");
 
   const sendDataToAPI = () => {
     axios.patch(
@@ -19,7 +18,6 @@ export default function Update() {
     setID(localStorage.getItem("ID"));
   }, []);
 
-  console.log("3", repo);
   return (
     <div>
       <Form>
