@@ -1,10 +1,8 @@
-# Getting Started with Create React App
+# P & F Research Summmer Progamming Intern Javascript Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Clone
 
-## Available Scripts
-
-In the project directory, you can run:
+Url: https://github.com/TonyHNIU/plantfoodjavascripttest.git
 
 ### `npm install`
 
