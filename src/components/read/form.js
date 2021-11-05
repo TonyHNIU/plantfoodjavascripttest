@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button } from "semantic-ui-react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Form() {
   const [apiData, setApiData] = useState([]);
@@ -14,6 +15,11 @@ export default function Form() {
         setApiData(getData.data);
       });
   }, []);
+
+  const setData = (id, repoURL) => {
+    localStorage.setItem("ID", id);
+    localStorage.setItem("repoURL", repoURL);
+  };
 
   return (
     <Table celled>
@@ -37,7 +43,14 @@ export default function Form() {
           <Table.Cell>{apiData.created}</Table.Cell>
           <Table.Cell>{apiData.modified}</Table.Cell>
           <Table.Cell>
-            <Button color="green">Update</Button>
+            <Link to="/update">
+              <Button
+                color="green"
+                onClick={() => setData(apiData.id, apiData.repoURL)}
+              >
+                Update
+              </Button>
+            </Link>
           </Table.Cell>
         </Table.Row>
       </Table.Body>
